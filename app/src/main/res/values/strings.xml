@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Smart seek 2</string>
+    <string name="title_activity_maps">Map</string>
+    <!--these strings under here are used in the contact info page, and make the site and phone number links redirect to the right app-->
+    <string name="LinkToSite">
+        <a href="https://www.utwente.nl/">Our website</a>
+    </string>
+    <string name="LinkToPhoneNumber">
+        <a href="tel:+31-683-649-05">Our phone number: +31 6 983 649 05</a>
+    </string>
+</resources>
