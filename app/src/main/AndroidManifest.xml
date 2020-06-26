@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
 
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -44,6 +43,11 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".GameEndPopUp"
+            android:theme="@style/AppTheme.CustomTheme"/>
+        <activity android:name=".MapInfoPopUp"
+            android:theme="@style/AppTheme.CustomTheme"/>
         <activity android:name=".ConnectBracelet" />
         <activity android:name=".Contact" />
         <activity android:name=".StartMainMenu" />
@@ -55,6 +59,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+
+    </application>
 </manifest>

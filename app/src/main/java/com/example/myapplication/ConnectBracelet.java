@@ -3,6 +3,9 @@ package com.example.myapplication;
  *
  * @title: the activity to create a list of bluetooth devices that are available and connect with the one that gives a gps signal
  * @author: Eva Vogelezang
+ * @reference:
+ * Fahad, Engr. (August 9, 2019). Monitoring over Bluetooth. https://www.electroniclinic.com/how-to-create-android-app-for-arduino-sensor-monitoring-over-bluetooth/#AndroidManifest_xml_code
+ *
  *
  */
 import android.app.Activity;
@@ -144,11 +147,14 @@ public class ConnectBracelet extends Activity {
                 BluetoothDevice device = ((MyAdapter) (listView.getAdapter())).getSelectedItem();
 
                 //go to the the main2activity class
-                Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
-                intent.putExtra(DEVICE_EXTRA, device);
-                intent.putExtra(DEVICE_UUID, mDeviceUUID.toString());
-                intent.putExtra(BUFFER_SIZE, mBufferSize);
-                startActivity(intent);
+                //Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+                //intent.putExtra(DEVICE_EXTRA, device);
+                //intent.putExtra(DEVICE_UUID, mDeviceUUID.toString());
+                //intent.putExtra(BUFFER_SIZE, mBufferSize);
+                //startActivity(intent);
+                //startActivity(new Intent(ConnectBracelet.this, Main2Activity.class));
+                //show message
+                showToast("Your device is connected");
             }
         });
 
@@ -353,5 +359,10 @@ public class ConnectBracelet extends Activity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    //show message string for short amount of time
+    private void showToast(String msg) {
+        Toast.makeText(this, msg,Toast.LENGTH_SHORT).show();
     }
 }
